@@ -15,7 +15,7 @@ function clickHandler() {
     for (const value of formData.values()) {
         if (correctAnswers[index] === value) {
             score += 1;
-        }
+        }    
         index += 1;
     }
     displayScore(score);
