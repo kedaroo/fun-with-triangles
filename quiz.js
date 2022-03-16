@@ -8,7 +8,7 @@ function displayScore(score) {
     divOutput.innerText = "Score is " + score;
 }
 
-function clickHandler() {
+function calculateScore(formQuiz) {
     const formData = new FormData(formQuiz);
     let score = 0;
     let index = 0;
@@ -18,6 +18,11 @@ function clickHandler() {
         }    
         index += 1;
     }
+    return score;
+}
+
+function clickHandler() {
+    let score = calculateScore(formQuiz);
     displayScore(score);
 }
 
