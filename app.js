@@ -17,10 +17,14 @@ function calculateSum() {
 function validateInput() {
     for (const element of inputAngles) {
         if (!element.value) {
-            return false
+            return false;
         }
     } 
-    return true
+    return true;
+}
+
+function setOutput(msg) {
+    divOutput.innerText = msg;
 }
 
 function clickHandler() {
@@ -28,12 +32,12 @@ function clickHandler() {
     if (validInput) {
         const isTriangle = calculateSum()
         if (isTriangle) {
-            divOutput.innerText = "it is a triangle";
+            setOutput("it is a triangle");
         } else {
-            divOutput.innerText = "it is not a triangle";
+            setOutput("it is not a triangle");
         }
     } else {
-        divOutput.innerText = "please enter all 3 angles";
+        setOutput("please enter all 3 angles");
     }
 }
 
